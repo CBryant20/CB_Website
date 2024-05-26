@@ -1,0 +1,140 @@
+body {
+  font-size: 3rem;
+  line-height: 2;
+  color: #333;
+  overflow-x: hidden;
+}
+
+p {
+  font-size: 2rem;
+  line-height: 1.6;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 3rem;
+}
+
+.ant-layout {
+  background: #fff;
+}
+
+.main-layout {
+  padding: 0;
+  height: auto;
+  line-height: 1.6;
+
+  .header {
+    color: #1890ff;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 0;
+    text-align: center;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    padding: 0;
+    height: auto;
+    line-height: 2;
+
+    .ant-anchor {
+      display: flex;
+    }
+
+    .ant-anchor-link {
+      padding: 0 1rem;
+    }
+
+    .ant-anchor-link-title {
+      font-size: 1rem;
+      color: #fff;
+      text-transform: uppercase;
+      text-decoration: none;
+
+      &:hover,
+      &.active {
+        text-decoration: underline;
+        color: #1890ff;
+      }
+    }
+  }
+}
+
+.footer {
+  background: #111;
+  color: #fff;
+  padding: 2rem 0;
+  text-align: center;
+
+  a {
+    color: #fff;
+  }
+
+  .icons {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+
+    li {
+      margin: 0 1rem;
+
+      a {
+        color: #fff;
+
+        img {
+          width: 2rem;
+          height: 2rem;
+        }
+
+        .material-symbols-outlined {
+          font-size: 2rem;
+        }
+
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+
+  // .go-top {
+  //   font-size: 24px;
+  //   color: #1890ff;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   width: 40px;
+  //   height: 40px;
+  //   background: white;
+  //   border-radius: 50%;
+  //   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  //   z-index: 999;
+
+  //   &:hover {
+  //     opacity: 0.7;
+  //   }
+  // }
+}
+
+.mobileVisible {
+  display: none;
+}
+
+.mobileHidden {
+  display: block;
+}
+
+@media only screen and (max-width: 750px) {
+  .mobileVisible {
+    display: block;
+  }
+
+  .mobileHidden {
+    display: none;
+  }
+}

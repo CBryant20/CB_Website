@@ -8,16 +8,16 @@ import AppHome from "./components/views/Home";
 import { Layout } from "antd";
 const { Header, Content, Footer } = Layout;
 
-// import "antd/dist/antd.css";
+import "./Root.scss";
 
 export default function Root() {
   return (
     <>
-      <Layout className='mainLayout'>
-        <Header>
+      <Layout className='main-layout'>
+        <Header className='header'>
           <AppHeader />
         </Header>
-        <Content>
+        <Content className='content'>
           {/* <aside>
             <Sidebar />
           </aside> */}
@@ -26,7 +26,7 @@ export default function Root() {
             <Outlet />
           </section>
         </Content>
-        <Footer>
+        <Footer className='footer'>
           <AppFooter />
         </Footer>
       </Layout>

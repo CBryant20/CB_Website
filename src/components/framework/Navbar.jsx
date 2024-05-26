@@ -1,9 +1,6 @@
 import { useState } from "react";
 
 import { Anchor, Drawer, Button } from "antd";
-const { Link } = Anchor;
-
-import CBlogo from "../../images/CBlogo.png";
 
 export default function AppHeader() {
   const [visible, setVisible] = useState(false);
@@ -24,10 +21,12 @@ export default function AppHeader() {
   ];
 
   return (
-    <nav>
-      <div>
+    <nav className='container'>
+      <div className='header'>
         <section>
-          <a>CHARLES</a>
+          <a className='logo' href='http://charleswbryant.com'>
+            CHARLES
+          </a>
           <a>Bryant</a>
         </section>
         <div className='mobileHidden'>
@@ -45,12 +44,7 @@ export default function AppHeader() {
             onClose={onClose}
             open={visible}
           >
-            <Anchor targetOffset='65'>
-              <Link href='#Hero' title='Home' />
-              <Link href='#About' title='About' />
-              <Link href='#Work' title='Work' />
-              <Link href='#Contact' title='Contact' />
-            </Anchor>
+            <Anchor targetOffset='65' items={anchorItems} />
           </Drawer>
         </div>
       </div>

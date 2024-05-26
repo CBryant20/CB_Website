@@ -1,16 +1,19 @@
-import GitHubImage from "../../images/github-mark-black.png";
+import GitHubImage from "../../images/github-mark-white.png";
 import LinkedInImage from "../../images/LinkedIn4.png";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowCircleUp } from "@fortawesome/free-solid-svg-icons";
 
 import { FloatButton } from "antd";
 
 export default function AppFooter() {
   return (
-    <div className='container-fluid'>
+    <div className='container'>
       <div className='footer'>
-        <div>
+        <div className='logo'>
           <a href='#'>Charles Bryant</a>
         </div>
-        <ul className='socials'>
+        <ul className='icons'>
           <li>
             <a href='https://www.linkedin.com/in/charleswbryant/'>
               <img src={LinkedInImage} alt='LinkedIn Icon' />
@@ -29,8 +32,8 @@ export default function AppFooter() {
         </ul>
         <div className='copyright'>Copyright &copy; 2024 CB</div>
         <FloatButton.BackTop>
-          <div className='goTop'>
-            <i className='fas fa-arrow-circle-up'></i>
+          <div className='go-top'>
+            <FontAwesomeIcon icon={faArrowCircleUp} />
           </div>
         </FloatButton.BackTop>
       </div>
