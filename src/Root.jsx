@@ -17,10 +17,7 @@ export default function Root() {
         <Header className='header'>
           <AppHeader />
         </Header>
-        <Content className='content'>
-          {/* <aside>
-            <Sidebar />
-          </aside> */}
+        <Content>
           <section>
             <AppHome />
             <Outlet />
