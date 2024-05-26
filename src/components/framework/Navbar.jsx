@@ -35,7 +35,9 @@ export default function AppHeader() {
         </div>
         <div className='mobileVisible'>
           <Button type='primary' onClick={showDrawer}>
-            <img src={CBlogo} alt='CB Logo' />
+            <a href='#' className='material-symbols-outlined'>
+              menu
+            </a>
           </Button>
           <Drawer
             placement='right'

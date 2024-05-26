@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 
 import AppHeader from "./components/framework/Navbar";
-// import AppFooter from "./components/framework/Footer";
+import AppFooter from "./components/framework/Footer";
 import AppHome from "./components/views/Home";
 // import Sidebar from "./components/framework/Sidebar";
 
@@ -26,9 +26,9 @@ export default function Root() {
             <Outlet />
           </section>
         </Content>
-        {/* <Footer>
+        <Footer>
           <AppFooter />
-        </Footer> */}
+        </Footer>
       </Layout>
     </>
   );
