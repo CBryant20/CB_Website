@@ -10,12 +10,14 @@ import {
   faHtml5,
 } from "@fortawesome/free-brands-svg-icons";
 
+import "./Projects.scss";
+
 export default function BookBuddy() {
   return (
     <>
       <div className='main-project'>
         <header>
-          <Link className='back-button' to='/work'>
+          <Link className='back-button' to='/'>
             BACK
           </Link>
         </header>
