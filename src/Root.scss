@@ -1,7 +1,7 @@
 body {
   font-size: 3rem;
   line-height: 2;
-  color: #333;
+  color: #cccccc;
   overflow-x: hidden;
 }
 
@@ -70,6 +70,14 @@ TITLES
     height: auto;
     line-height: 2;
 
+    .ant-anchor-wrapper {
+      background: none;
+    }
+
+    .ant-anchor {
+      display: flex;
+    }
+
     .ant-menu {
       display: flex;
       flex-direction: row;
@@ -99,21 +107,23 @@ TITLES
 
     .ant-anchor-link-title {
       font-size: 1rem;
-      color: #fff;
+      color: #1890ff;
       text-transform: uppercase;
       text-decoration: none;
 
       &:hover,
       &.active {
-        text-decoration: underline;
         color: #1890ff;
+        scale: 1.2;
+
+        transition: all 0.3s ease;
       }
     }
   }
 }
 
 .hero-block {
-  background: #a1a1a1;
+  background: #ebebeb;
   padding: 2rem;
 
   height: 100vh;
@@ -131,7 +141,7 @@ TITLES
       animation: typing 5s steps(22) 1s forwards, fadeIn 0.5s 1s forwards;
 
       @media screen and (max-width: 750px) {
-        font-size: 2.5rem;
+        font-size: 1.2em;
         transition: all 0.1s ease;
       }
 
