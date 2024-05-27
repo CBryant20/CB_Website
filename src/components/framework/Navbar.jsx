@@ -18,10 +18,8 @@ export default function AppHeader() {
     <nav className='container'>
       <div className='header'>
         <section>
-          <a className='logo' href='http://charleswbryant.com'>
-            CHARLES
-          </a>
-          <a>Bryant</a>
+          <a className='logo'>CHARLES</a>
+          <a className='name'>Bryant</a>
         </section>
         <div className='mobileHidden'>
           <Anchor targetOffset={65}>
@@ -32,16 +30,15 @@ export default function AppHeader() {
           </Anchor>
         </div>
         <div className='mobileVisible'>
-          <Button type='primary' onClick={showDrawer}>
-            <a href='#' className='material-symbols-outlined'>
-              menu
-            </a>
+          <Button type='primary' onClick={showDrawer} className='menu-button'>
+            <span className='material-symbols-outlined'>menu</span>
           </Button>
           <Drawer
             placement='right'
             closable={false}
             onClose={onClose}
             open={visible}
+            className='drawer'
           >
             <Anchor targetOffset={65}>
               <Link href='#Hero' title='Home' />
