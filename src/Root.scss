@@ -102,22 +102,16 @@ TITLES
     }
 
     .ant-anchor-link {
-      padding: 0 1rem;
+      padding: 0 20px;
+      line-height: 1.4;
+      position: relative;
     }
 
     .ant-anchor-link-title {
-      font-size: 1rem;
-      color: #1890ff;
-      text-transform: uppercase;
+      font-weight: 600;
+
       text-decoration: none;
-
-      &:hover,
-      &.active {
-        color: #1890ff;
-        scale: 1.2;
-
-        transition: all 0.3s ease;
-      }
+      position: relative;
     }
   }
 }
