@@ -2,6 +2,8 @@ import AppHeader from "./components/framework/Navbar";
 import AppFooter from "./components/framework/Footer";
 import AppHome from "./components/views/Home";
 
+import { Outlet } from "react-router-dom";
+
 import { Layout } from "antd";
 const { Header, Content, Footer } = Layout;
 
@@ -15,7 +17,7 @@ export default function Root() {
           <AppHeader />
         </Header>
         <Content>
-          <AppHome />
+          <Outlet />
         </Content>
         <Footer className='footer'>
           <AppFooter />
