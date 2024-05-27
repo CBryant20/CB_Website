@@ -15,6 +15,13 @@ body {
   background: #fff;
 }
 
+.main-layout .ant-layout-header {
+  background: #f8f8f8;
+  padding: 0;
+  height: auto;
+  line-height: 1.6;
+}
+
 /* 
 TITLES
 ------------
@@ -63,6 +70,13 @@ TITLES
     height: auto;
     line-height: 2;
 
+    .ant-menu {
+      display: flex;
+      flex-direction: row;
+      border: 0;
+      background: none !important;
+    }
+
     .logo {
       font-size: 2rem;
       font-weight: bold;
@@ -98,7 +112,7 @@ TITLES
   }
 }
 
-.hero {
+.hero-block {
   background: #a1a1a1;
   display: flex;
   flex-direction: row;
@@ -111,8 +125,7 @@ TITLES
     padding: 2rem;
 
     h2 {
-      font-size: 4rem;
-      margin-bottom: 4rem;
+      font-size: 3.5rem;
       white-space: nowrap;
       overflow: hidden;
       opacity: 0;
@@ -206,10 +219,10 @@ TITLES
   }
 
   .content {
-    max-width: 640px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
     padding: 0 0 70px;
   }
 

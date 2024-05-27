@@ -1,5 +1,3 @@
-import { Outlet } from "react-router-dom";
-
 import AppHeader from "./components/framework/Navbar";
 import AppFooter from "./components/framework/Footer";
 import AppHome from "./components/views/Home";
@@ -17,10 +15,7 @@ export default function Root() {
           <AppHeader />
         </Header>
         <Content>
-          <section>
-            <AppHome />
-            <Outlet />
-          </section>
+          <AppHome />
         </Content>
         <Footer className='footer'>
           <AppFooter />
