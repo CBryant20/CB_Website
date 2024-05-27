@@ -8,57 +8,60 @@ export default function AppContact() {
         <div className='titleHolder'>
           <h2>Get in Touch</h2>
         </div>
-        <Form
-          name='normal_login'
-          className='login-form'
-          initialValues={{ remember: true }}
-        >
-          <Form.Item
-            name='fullname'
-            rules={[
-              {
-                required: true,
-                message: "Please enter your full name!",
-              },
-            ]}
-          >
-            <Input placeholder='Full Name' />
-          </Form.Item>
-          <Form.Item
-            name='email'
-            rules={[
-              {
-                type: "email",
-                message: "The input is not valid E-mail!",
-              },
-              {
-                required: true,
-                message: "Please input your E-mail!",
-              },
-            ]}
-          >
-            <Input placeholder='Email Address' />
-          </Form.Item>
-          <Form.Item name='telephone'>
-            <Input placeholder='Telephone' />
-          </Form.Item>
-          <Form.Item name='subject'>
-            <Input placeholder='Subject' />
-          </Form.Item>
-          <Form.Item name='message'>
-            <TextArea placeholder='Message' />
-          </Form.Item>
+        <div className='column'>
+          <form action='https://api.web3forms.com/submit' method='POST'>
+            <input
+              type='hidden'
+              name='access_key'
+              value='b7f60ed2-4dc3-42e5-8ab4-80bdf117cda4'
+            />
+            <label htmlFor='fname'>First Name</label>
+            <input
+              className='input-box'
+              type='text'
+              id='fname'
+              name='fname'
+              placeholder='Your first name..'
+              required
+            />
 
-          <Form.Item>
-            <Button
-              type='primary'
-              htmlType='submit'
-              className='login-form-button'
-            >
-              Submit
-            </Button>
-          </Form.Item>
-        </Form>
+            <label htmlFor='lname'>Last Name</label>
+            <input
+              className='input-box'
+              type='text'
+              id='lname'
+              name='lname'
+              placeholder='Your last name..'
+              required
+            />
+
+            <label htmlFor='email'>Email</label>
+            <input
+              className='input-box'
+              type='email'
+              id='email'
+              name='email'
+              placeholder='Email...'
+              required
+            />
+
+            <label htmlFor='message'>Message</label>
+            <textarea
+              className='input-box'
+              id='message'
+              name='message'
+              placeholder='Write something or just say Hi!'
+              required
+            ></textarea>
+            <div class='h-captcha' data-captcha='true'></div>
+            <input className='input-submit' type='submit' value='Submit' />
+          </form>
+          {/* <script
+            src='https://web3forms.com/client/script.js'
+            async
+            defer
+          ></script> */}
+        </div>
       </div>
     </div>
   );
