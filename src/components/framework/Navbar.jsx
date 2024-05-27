@@ -23,10 +23,10 @@ export default function AppHeader() {
         </section>
         <div className='mobileHidden'>
           <Anchor targetOffset={65}>
-            <Link href='#Hero' title='Home' />
-            <Link href='#About' title='About' />
-            <Link href='#Work' title='Work' />
-            <Link href='#Contact' title='Contact' />
+            <Link href='#hero' title='Home' />
+            <Link href='#about' title='About' />
+            <Link href='#work' title='Work' />
+            <Link href='#contact' title='Contact' />
           </Anchor>
         </div>
         <div className='mobileVisible'>
@@ -41,10 +41,10 @@ export default function AppHeader() {
             className='drawer'
           >
             <Anchor targetOffset={65}>
-              <Link href='#Hero' title='Home' />
-              <Link href='#About' title='About' />
-              <Link href='#Work' title='Work' />
-              <Link href='#Contact' title='Contact' />
+              <Link href='#hero' title='Home' />
+              <Link href='#about' title='About' />
+              <Link href='#work' title='Work' />
+              <Link href='#contact' title='Contact' />
             </Anchor>
           </Drawer>
         </div>

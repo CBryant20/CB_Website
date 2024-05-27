@@ -2,8 +2,8 @@ import HomePagePic from "../../images/HomePagePic.png";
 
 export default function AppHero() {
   return (
-    <>
-      <section className='hero'>
+    <div id='hero' className='hero-block'>
+      <section className='container'>
         <aside className='hero-text'>
           <h2>Hello, I am Charles Bryant</h2>
           <p>
@@ -23,6 +23,6 @@ export default function AppHero() {
           <img src={HomePagePic} alt='Error loading image' />
         </aside>
       </section>
-    </>
+    </div>
   );
 }

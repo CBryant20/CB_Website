@@ -3,7 +3,7 @@ const { TextArea } = Input;
 
 export default function AppContact() {
   return (
-    <div className='contact'>
+    <div id='contact' className='contact'>
       <div className='container'>
         <div className='titleHolder'>
           <h2>Get in Touch</h2>

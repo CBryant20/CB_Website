@@ -12,7 +12,7 @@ const items = [
     title:
       "Long Beach State Animation Graduate Skilled in CAD, Adobe Creative Suite, 3D Modeling, and 4D Design",
     content:
-      "Graduating from Long Beach State with a Bachelor of Arts degree in animation, I've cultivated a diverse skill set. Proficient in tools like CAD, Adobe Creative Suite (Illustrator, Photoshop, After Effects), and 3D modeling software such as 3D Stu dioMAX and MAYA, I've explored various mediums to express my creativity. I've even ventured into building 4-dimensional models, pushing the boundaries of traditional design.",
+      "Graduating from Long Beach State with a Bachelor of Arts degree in animation, I've cultivated a diverse skill set. Proficient in tools like CAD, Adobe Creative Suite (Illustrator, Photoshop, After Effects), and 3D modeling software such as 3D StudioMAX and MAYA, I've explored various mediums to express my creativity. I've even ventured into building 4-dimensional models, pushing the boundaries of traditional design.",
   },
   {
     key: "3",
@@ -26,9 +26,9 @@ const items = [
 export default function AppAbout() {
   return (
     <>
-      <div className='aboutBlock'>
+      <div id='about' className='aboutBlock'>
         <div className='titleHolder'>
-          <h2>About</h2>
+          <h2>About Me</h2>
         </div>
         <Carousel>
           {items.map((item) => {
