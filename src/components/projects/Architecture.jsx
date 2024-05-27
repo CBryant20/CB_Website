@@ -9,50 +9,48 @@ import "./Projects.scss";
 
 export default function Architecture() {
   return (
-    <>
-      <body className='main-project'>
-        <header>
-          <Link className='back-button' to='/'>
-            BACK
-          </Link>
-        </header>
-        <main className='projects'>
-          <section className='image-link'>
-            <h1>Atheneum Case Study</h1>
-            <h2>Created with:</h2>
-            <div className='program-icons'>
-              <div className='icon-wrapper'>
-                <div className='extra-icon'>
-                  <img src={Threedsmax} alt='Atheneum' />
-                </div>
-                <span className='icon-text'>3D StudioMAX</span>
+    <div className='main-project'>
+      <header>
+        <Link className='back-button' to='/'>
+          BACK
+        </Link>
+      </header>
+      <main className='projects'>
+        <section className='image-link'>
+          <h1>Atheneum Case Study</h1>
+          <h2>Created with:</h2>
+          <div className='program-icons'>
+            <div className='icon-wrapper'>
+              <div className='extra-icon'>
+                <img src={Threedsmax} alt='3D StudioMAX' />
               </div>
-              <div className='icon-wrapper'>
-                <div className='extra-icon'>
-                  <img src={Illustrator} alt='Illustrator' />
-                </div>
-                <span className='icon-text'>Adobe Illustrator</span>
+              <span className='icon-text'>3D StudioMAX</span>
+            </div>
+            <div className='icon-wrapper'>
+              <div className='extra-icon'>
+                <img src={Illustrator} alt='Adobe Illustrator' />
               </div>
+              <span className='icon-text'>Adobe Illustrator</span>
             </div>
-            <img src={Atheneum1} alt='Bullies' />
-
-            <div className='project-title'>
-              <ul>
-                <li>Richard Meier's Atheneum</li>
-                <li>Independent Case Study using 3D StudioMAX</li>
-                <li>
-                  The Atheneum represents Post Modern Architecture. Meier
-                  designed the Atheneum to show the comparison of old style New
-                  harmony architecture to the Postmodern era.
-                </li>
-              </ul>
-            </div>
-          </section>
-          <div className='bottom-images'>
-            <img src={Atheneum2} alt='Logo Sketches' />
           </div>
-        </main>
-      </body>
-    </>
+          <img src={Atheneum1} alt='Atheneum' style={{ width: "100%" }} />
+
+          <div className='project-title'>
+            <ul>
+              <li>Richard Meier's Atheneum</li>
+              <li>Independent Case Study using 3D StudioMAX</li>
+              <li>
+                The Atheneum represents Post Modern Architecture. Meier designed
+                the Atheneum to show the comparison of old style New harmony
+                architecture to the Postmodern era.
+              </li>
+            </ul>
+          </div>
+        </section>
+        <div className='bottom-images'>
+          <img src={Atheneum2} alt='Atheneum' style={{ width: "50%" }} />
+        </div>
+      </main>
+    </div>
   );
 }
