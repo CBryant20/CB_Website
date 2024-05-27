@@ -5,12 +5,14 @@ import Illustrator from "../../images/illustrator.png";
 
 import { Link } from "react-router-dom";
 
+import "./Projects.scss";
+
 export default function Architecture() {
   return (
     <>
       <body className='main-project'>
         <header>
-          <Link className='back-button' to='/work'>
+          <Link className='back-button' to='/'>
             BACK
           </Link>
         </header>
