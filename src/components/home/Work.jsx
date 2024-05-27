@@ -23,7 +23,7 @@ export default function AppWork({ onSelectProject }) {
   return (
     <>
       <div className='container'>
-        <div className='title'>
+        <div className='titleHolder'>
           <h2>Work</h2>
         </div>
         <Row gutter={[16, 16]}>

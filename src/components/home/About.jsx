@@ -26,12 +26,15 @@ const items = [
 export default function AppAbout() {
   return (
     <>
-      <div>
+      <div className='aboutBlock'>
+        <div className='titleHolder'>
+          <h2>About</h2>
+        </div>
         <Carousel>
           {items.map((item) => {
             return (
-              <div key={item.key}>
-                <div>
+              <div key={item.key} className='container'>
+                <div className='content'>
                   <h3>{item.title}</h3>
                   <p>{item.content}</p>
                 </div>
