@@ -139,8 +139,7 @@ TITLES
       animation: typing 5s steps(22) 1s forwards, fadeIn 0.5s 1s forwards;
 
       @media screen and (max-width: 750px) {
-        font-size: 1.2em;
-        transition: all 0.1s ease;
+        display: none;
       }
 
       @keyframes typing {
