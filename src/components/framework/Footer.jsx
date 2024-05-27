@@ -2,7 +2,7 @@ import GitHubImage from "../../images/github-mark-white.png";
 import LinkedInImage from "../../images/LinkedIn4.png";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowCircleUp } from "@fortawesome/free-solid-svg-icons";
+import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
 import { FloatButton } from "antd";
 
@@ -33,7 +33,7 @@ export default function AppFooter() {
         <div className='copyright'>Copyright &copy; 2024 CB</div>
         <FloatButton.BackTop>
           <div className='go-top'>
-            <FontAwesomeIcon icon={faArrowCircleUp} />
+            <FontAwesomeIcon icon={faArrowUp} />
           </div>
         </FloatButton.BackTop>
       </div>
