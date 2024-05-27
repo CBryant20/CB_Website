@@ -110,8 +110,14 @@ TITLES
     .ant-anchor-link-title {
       font-weight: 600;
 
-      text-decoration: none;
-      position: relative;
+
+      &:hover,
+      &.active {
+        color: #1890ff;
+        scale: 1.2;
+        font-weight: bold;
+        transition: all 0.3s ease;
+      }
     }
   }
 }
@@ -250,14 +256,88 @@ TITLES
   }
 }
 
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+
+  .input-box:hover {
+    border-color: #048beb;
+    box-shadow: 0 0 5px rgba(4, 139, 235, 0.5);
+  }
+
+  form {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  label {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #1268b9;
+  }
+
+  .input-box,
+  textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #3a3a3a;
+    margin-top: 1rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .input-submit {
+    background-color: #048beb;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+
+  .input-submit:hover {
+    background-color: #024f86;
+  }
+
+  .container {
+    border-radius: 0.75rem;
+    background-color: #f2f2f2;
+    padding: 1.2rem;
+  }
+
+  .column {
+    width: 75%;
+    margin-top: 1rem;
+    padding: 1.3rem;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  @media screen and (max-width: 600px) {
+    .column,
+    .input-submit {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+}
+
 .footer {
   background: #111;
   color: #fff;
-  padding: 2rem 0;
   text-align: center;
 
   a {
-    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ffffff;
   }
 
   .icons {
@@ -268,7 +348,7 @@ TITLES
     padding: 0;
 
     li {
-      margin: 0 1rem;
+      margin: 0 2.5rem;
 
       a {
         color: #fff;
@@ -283,29 +363,15 @@ TITLES
         }
 
         &:hover {
-          opacity: 0.5;
+          opacity: 0.4;
         }
       }
     }
+
+    .go-top:hover {
+      opacity: 0.1;
+    }
   }
-
-  // .go-top {
-  //   font-size: 24px;
-  //   color: #1890ff;
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: center;
-  //   width: 40px;
-  //   height: 40px;
-  //   background: white;
-  //   border-radius: 50%;
-  //   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  //   z-index: 999;
-
-  //   &:hover {
-  //     opacity: 0.7;
-  //   }
-  // }
 }
 
 .mobileVisible {
