@@ -40,7 +40,7 @@ export default function AppHeader() {
             open={visible}
             className='drawer'
           >
-            <Anchor targetOffset={65}>
+            <Anchor targetOffset={65} onClick={onClose}>
               <Link href='#hero' title='Home' />
               <Link href='#about' title='About' />
               <Link href='#work' title='Work' />
