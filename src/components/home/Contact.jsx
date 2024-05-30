@@ -1,6 +1,3 @@
-import { Form, Input, Button, Checkbox } from "antd";
-const { TextArea } = Input;
-
 export default function AppContact() {
   return (
     <div id='contact' className='contact'>
@@ -53,7 +50,7 @@ export default function AppContact() {
               placeholder='Write something or just say Hi!'
               required
             ></textarea>
-            <div class='h-captcha' data-captcha='true'></div>
+            <div className='h-captcha' data-captcha='true'></div>
             <input className='input-submit' type='submit' value='Submit' />
           </form>
           {/* <script
