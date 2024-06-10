@@ -58,23 +58,17 @@ export default function AppHeader() {
             open={visible}
             className='drawer'
           >
-            {isProjectPage ? (
-              <RouterLink className='back-button' to='/' onClick={onClose}>
-                BACK
-              </RouterLink>
-            ) : (
-              <Anchor
-                targetOffset={65}
-                onClick={(e) =>
-                  handleNavigation(e, e.target.getAttribute("href"))
-                }
-              >
-                <Link href='#hero' title='Home' />
-                <Link href='#about' title='About' />
-                <Link href='#work' title='Work' />
-                <Link href='#contact' title='Contact' />
-              </Anchor>
-            )}
+            <Anchor
+              targetOffset={65}
+              onClick={(e) =>
+                handleNavigation(e, e.target.getAttribute("href"))
+              }
+            >
+              <Link href='#hero' title='Home' />
+              <Link href='#about' title='About' />
+              <Link href='#work' title='Work' />
+              <Link href='#contact' title='Contact' />
+            </Anchor>
           </Drawer>
         </div>
       </div>
