@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link as RouterLink, useLocation } from "react-router-dom";
+import { Link as RouterLink, useLocation, useNavigate } from "react-router-dom";
 import { Anchor, Drawer, Button } from "antd";
 
 const { Link } = Anchor;
@@ -7,12 +7,23 @@ const { Link } = Anchor;
 export default function AppHeader() {
   const [visible, setVisible] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   const showDrawer = () => {
     setVisible(true);
   };
 
   const onClose = () => {
+    setVisible(false);
+  };
+
+  const handleNavigation = (e, href) => {
+    e.preventDefault();
+    if (location.pathname !== "/") {
+      navigate("/", { state: { target: href } });
+    } else {
+      document.querySelector(href).scrollIntoView({ behavior: "smooth" });
+    }
     setVisible(false);
   };
 
@@ -26,7 +37,10 @@ export default function AppHeader() {
           <a className='name'>Bryant</a>
         </section>
         <div className='mobileHidden'>
-          <Anchor targetOffset={65}>
+          <Anchor
+            targetOffset={65}
+            onClick={(e) => handleNavigation(e, e.target.getAttribute("href"))}
+          >
             <Link href='#hero' title='Home' />
             <Link href='#about' title='About' />
             <Link href='#work' title='Work' />
@@ -49,7 +63,12 @@ export default function AppHeader() {
                 BACK
               </RouterLink>
             ) : (
-              <Anchor targetOffset={65} onClick={onClose}>
+              <Anchor
+                targetOffset={65}
+                onClick={(e) =>
+                  handleNavigation(e, e.target.getAttribute("href"))
+                }
+              >
                 <Link href='#hero' title='Home' />
                 <Link href='#about' title='About' />
                 <Link href='#work' title='Work' />
