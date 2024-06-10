@@ -1,3 +1,6 @@
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+import { Spin } from "antd";
 import Atheneum1 from "../../images/04 (Atheneum).png";
 import Atheneum2 from "../../images/05 (Atheneum).png";
 import Threedsmax from "../../images/Threeds-max.png";
@@ -8,6 +11,28 @@ import { Link } from "react-router-dom";
 import "./Projects.scss";
 
 export default function Architecture() {
+  const [loading, setLoading] = useState(true);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.state?.loading) {
+      setTimeout(() => setLoading(false), 1500);
+    } else {
+      setLoading(false);
+    }
+  }, [location.state]);
+
+  if (loading) {
+    return (
+      <div className='loading-overlay'>
+        <div className='loading-box'>
+          <Spin size='large' />
+          <p>Loading...</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className='main-project'>
       <header>
