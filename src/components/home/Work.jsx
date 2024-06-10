@@ -1,11 +1,11 @@
+import { Row, Col, Card } from "antd";
+import { useNavigate } from "react-router-dom";
 import WorkoutPic from "../../images/WelcomePage.png";
 import ConnectHubPic from "../../images/ConnectHub.png";
 import Books from "../../images/BookBuddy.png";
 import SBBullies from "../../images/South-Bay-Bullies-Logo.png";
 import Atheneum1 from "../../images/04 (Atheneum).png";
-
-import { Row, Col, Card } from "antd";
-import { useNavigate } from "react-router-dom";
+import "../projects/Projects.scss";
 
 const { Meta } = Card;
 
@@ -13,7 +13,7 @@ export default function AppWork() {
   const navigate = useNavigate();
 
   const handleProjectClick = (path) => {
-    navigate(path);
+    navigate(path, { state: { loading: true } });
   };
 
   const cardStyle = {

@@ -1,3 +1,6 @@
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+import { Spin } from "antd";
 import { Link } from "react-router-dom";
 import BookBuddyImage from "../../images/BookBuddy.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,6 +14,28 @@ import {
 import "./Projects.scss";
 
 export default function BookBuddy() {
+  const [loading, setLoading] = useState(true);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.state?.loading) {
+      setTimeout(() => setLoading(false), 1500);
+    } else {
+      setLoading(false);
+    }
+  }, [location.state]);
+
+  if (loading) {
+    return (
+      <div className='loading-overlay'>
+        <div className='loading-box'>
+          <Spin size='large' />
+          <p>Loading...</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className='main-project'>
       <header>
