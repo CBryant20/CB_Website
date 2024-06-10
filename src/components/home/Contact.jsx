@@ -1,4 +1,12 @@
+import { useState } from "react";
+
 export default function AppContact() {
+  const [showOtherInput, setShowOtherInput] = useState(false);
+
+  const handleHearChange = (e) => {
+    setShowOtherInput(e.target.value === "other");
+  };
+
   return (
     <div id='contact' className='contact'>
       <div className='container'>
@@ -12,7 +20,7 @@ export default function AppContact() {
               name='access_key'
               value='b7f60ed2-4dc3-42e5-8ab4-80bdf117cda4'
             />
-            <label htmlFor='fname'>First Name</label>
+            <label htmlFor='fname'>First Name *</label>
             <input
               className='input-box'
               type='text'
@@ -22,7 +30,7 @@ export default function AppContact() {
               required
             />
 
-            <label htmlFor='lname'>Last Name</label>
+            <label htmlFor='lname'>Last Name *</label>
             <input
               className='input-box'
               type='text'
@@ -32,7 +40,7 @@ export default function AppContact() {
               required
             />
 
-            <label htmlFor='email'>Email</label>
+            <label htmlFor='email'>Email *</label>
             <input
               className='input-box'
               type='email'
@@ -42,12 +50,53 @@ export default function AppContact() {
               required
             />
 
-            <label htmlFor='message'>Message</label>
+            <label htmlFor='hear'>How did you hear about my website? *</label>
+            <select
+              className='input-box'
+              id='hear'
+              name='hear'
+              required
+              onChange={handleHearChange}
+            >
+              <option value='' disabled selected>
+                Select an option
+              </option>
+              <option value='resume'>Resume</option>
+              <option value='email'>Email</option>
+              <option value='linkedin'>LinkedIn</option>
+              <option value='other'>Other</option>
+            </select>
+
+            {showOtherInput && (
+              <input
+                className='input-box'
+                type='text'
+                id='other'
+                name='other'
+                placeholder='Please specify other source...'
+                required
+              />
+            )}
+
+            <label htmlFor='improvement'>
+              What improvements can I make to enhance your user experience? *
+            </label>
+            <input
+              className='input-box'
+              type='text'
+              id='improvement'
+              name='improvement'
+              required
+            />
+
+            <label htmlFor='message'>
+              Could you please share details about the project you need
+              completed and the goals you aim to achieve? *
+            </label>
             <textarea
               className='input-box'
               id='message'
               name='message'
-              placeholder='Write something or just say Hi!'
               required
             ></textarea>
             <div className='h-captcha' data-captcha='true'></div>
