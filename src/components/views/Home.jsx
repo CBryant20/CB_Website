@@ -28,10 +28,18 @@ export default function AppHome() {
         selectedProject
       ) : (
         <>
-          <AppHero />
-          <AppAbout />
-          <AppWork onSelectProject={handleProjectSelect} />
-          <AppContact />
+          <div className='block'>
+            <AppHero />
+          </div>
+          <div className='block'>
+            <AppAbout />
+          </div>
+          <div className='block'>
+            <AppWork onSelectProject={handleProjectSelect} />
+          </div>
+          <div className='block'>
+            <AppContact />
+          </div>
         </>
       )}
     </div>
