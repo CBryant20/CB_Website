@@ -380,6 +380,7 @@ TITLES
   width: 100vw;
   height: 90vh;
   overflow: hidden;
+  overflow-x: hidden;
   // position: relative;
   top: auto;
 
@@ -535,6 +536,10 @@ TITLES
   }
 }
 
+.carousel .thumbnail::-webkit-scrollbar {
+  display: none;
+}
+
 .thumbnail {
   position: absolute;
   bottom: 50px;
@@ -542,6 +547,8 @@ TITLES
   width: max-content;
   z-index: 100;
   display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
   gap: 20px;
   border-radius: 20%;
 
@@ -549,6 +556,7 @@ TITLES
     width: 150px;
     height: 220px;
     flex-shrink: 0;
+    margin: 5px;
     position: relative;
     background: linear-gradient(to bottom, #000000, #bebebe);
     border: 1px solid transparent;
