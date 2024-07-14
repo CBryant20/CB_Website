@@ -33,19 +33,20 @@ export default function AppWork() {
   };
 
   return (
-    <div id='work' className='container'>
+    <div id='work' className='carousel'>
       <div className='titleHolder'>
         <h2>Some of My Work</h2>
       </div>
-      <Row gutter={[16, 16]}>
+      <Row className='list' gutter={[16, 16]}>
         <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
-          <Card hoverable style={cardStyle}>
+          <Card className='item' hoverable style={cardStyle}>
             <Meta title='Auction Site...' />
             <Meta title='Coming Soon' />
           </Card>
         </Col>
         <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
           <Card
+            className='item'
             hoverable
             cover={
               <img
@@ -57,11 +58,19 @@ export default function AppWork() {
             onClick={() => handleProjectClick("/DoYouEvenLiftBro")}
             style={cardStyle}
           >
+            <div className='content'>
+              <h1 className='title'>Title</h1>
+              <h3 className='topic'>This app is made of</h3>
+            </div>
+            <div className='buttons'>
+              <button>Learn More</button>
+            </div>
             <Meta title='Do You Even Lift Bro' />
           </Card>
         </Col>
         <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
           <Card
+            className='item'
             hoverable
             cover={
               <img alt='ConnectHub' src={ConnectHubPic} style={imgStyle} />
@@ -69,21 +78,37 @@ export default function AppWork() {
             onClick={() => handleProjectClick("/ConnectHub")}
             style={cardStyle}
           >
+            <div className='content'>
+              <h1 className='title'>Title</h1>
+              <h3 className='topic'>This app is made of</h3>
+            </div>
+            <div className='buttons'>
+              <button>Learn More</button>
+            </div>
             <Meta title='Connect Hub' />
           </Card>
         </Col>
         <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
           <Card
+            className='item'
             hoverable
             cover={<img alt='Book Buddy' src={Books} style={imgStyle} />}
             onClick={() => handleProjectClick("/BookBuddy")}
             style={cardStyle}
           >
+            <div className='content'>
+              <h1 className='title'>Title</h1>
+              <h3 className='topic'>This app is made of</h3>
+            </div>
+            <div className='buttons'>
+              <button>Learn More</button>
+            </div>
             <Meta title='Book Buddy' />
           </Card>
         </Col>
         <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
           <Card
+            className='item'
             hoverable
             cover={
               <img alt='South Bay Bullies' src={SBBullies} style={imgStyle} />
@@ -91,16 +116,31 @@ export default function AppWork() {
             onClick={() => handleProjectClick("/SouthBayBullies")}
             style={cardStyle}
           >
+            <div className='content'>
+              <h1 className='title'>Title</h1>
+              <h3 className='topic'>This app is made of</h3>
+            </div>
+            <div className='buttons'>
+              <button>Learn More</button>
+            </div>
             <Meta title='South Bay Bullies' />
           </Card>
         </Col>
         <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
           <Card
+            className='item'
             hoverable
             cover={<img alt='Atheneum1' src={Atheneum1} style={imgStyle} />}
             onClick={() => handleProjectClick("/Architecture")}
             style={cardStyle}
           >
+            <div className='content'>
+              <h1 className='title'>Title</h1>
+              <h3 className='topic'>This app is made of</h3>
+            </div>
+            <div className='buttons'>
+              <button>Learn More</button>
+            </div>
             <Meta title='Atheneum' />
           </Card>
         </Col>
