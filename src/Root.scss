@@ -22,6 +22,122 @@ body {
   line-height: 1.6;
 }
 
+.hero-block {
+  background: #ebebeb;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+
+    h2 {
+      font-size: 3rem;
+      white-space: nowrap;
+      overflow: hidden;
+      opacity: 0;
+      animation: typing 5s steps(22) 1s forwards, fadeIn 0.5s 1s forwards;
+
+      @media screen and (max-width: 750px) {
+        display: none;
+      }
+
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 75%;
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    }
+
+    p {
+      font-size: 1rem;
+
+      @media screen and (max-width: 750px) {
+        font-size: 0.8rem;
+        transition: all 0.1s ease;
+      }
+    }
+
+    @media screen and (min-width: 751px) {
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .hero-pic {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+
+    img {
+      max-width: 100%;
+      border-radius: 15%;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+      filter: grayscale(30%);
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: scale(1.15);
+        filter: grayscale(0%);
+      }
+
+      @media screen and (max-width: 750px) {
+        scale: 65%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 750px) {
+    flex-direction: column;
+  }
+}
+
+.work-section {
+  background: #ffffff;
+  padding: 2rem;
+  z-index: 1;
+  position: relative;
+
+  @media screen and (max-width: 750px) {
+    padding: 1rem;
+  }
+}
+
+.hero-block {
+  z-index: 2;
+}
+
+@media screen and (max-width: 750px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .hero-block {
+    padding: 3rem;
+    height: auto;
+  }
+
+  .hero-pic img {
+    max-width: 80%;
+  }
+}
 .block {
   animation: appear 3s linear;
   animation-timeline: view();
