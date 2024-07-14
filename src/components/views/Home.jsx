@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 
 import AppHero from "../home/Hero";
 import AppAbout from "../home/About";
-import AppWork from "../home/Work";
+import AppWork from "../home/Works";
 import AppContact from "../home/Contact";
 
 export default function AppHome() {
