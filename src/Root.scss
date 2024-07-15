@@ -1,19 +1,22 @@
 body {
-  font-size: 3rem;
-  line-height: 2;
-  color: #cccccc;
-  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-  margin: 0 auto;
+  width: 80%;
   max-width: 1200px;
-  padding: 0 3rem;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 @media screen and (max-width: 750px) {
   .container {
-    padding: 0 1rem;
+    width: 95%;
+    padding: 10px;
   }
 }
 
@@ -254,6 +257,26 @@ TITLES
   }
 }
 
+.menu {
+  list-style: none;
+  padding: 0;
+  display: flex;
+
+  li {
+    margin-right: 20px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #555;
+    transition: color 0.3s ease;
+  }
+
+  a:hover {
+    color: #007bff;
+  }
+}
+
 .hero-block {
   background: #ebebeb;
   padding: 2rem;
@@ -394,6 +417,7 @@ TITLES
   height: 90vh;
   overflow: hidden;
   overflow-x: hidden;
+  margin-top: 3rem;
 
   .list {
     display: flex;
@@ -402,7 +426,8 @@ TITLES
     .item {
       position: absolute;
       inset: 0 0 0 0;
-      flex: 1 0 auto;
+      flex: 0 0 100%;
+      max-width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -479,11 +504,6 @@ TITLES
           }
         }
       }
-    }
-
-    .item:not(:first-child) {
-      position: relative;
-      inset: auto;
     }
 
     .item:nth-child(1) {
@@ -566,7 +586,6 @@ TITLES
   overflow-x: auto;
   scrollbar-width: none;
   gap: 20px;
-  border-radius: 20%;
 
   .item {
     width: 150px;
@@ -588,6 +607,7 @@ TITLES
     }
 
     .content {
+      display: none;
       position: absolute;
       bottom: 10px;
       left: 10px;
@@ -599,6 +619,12 @@ TITLES
         text-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
       }
     }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .thumbnail {
+    display: none;
   }
 }
 
@@ -623,18 +649,20 @@ TITLES
   }
 
   button {
+    background-color: #4ba6fc;
+    color: #eee;
+    border: none;
+    border-radius: 50%;
     width: 40px;
     height: 40px;
-    border-radius: 50%;
-    background-color: #4ba6fc;
-    border: none;
-    font-family: monospace;
-    color: #eee;
-    font-weight: bold;
     font-size: large;
+    font-family: monospace;
+    font-weight: bold;
     transition: 0.5s;
     z-index: 100;
     display: block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
   }
 
   button:hover {
@@ -649,7 +677,7 @@ TITLES
   position: absolute;
   left: 50%;
   bottom: 50px;
-  border-radius: 20px;
+  // border-radius: 20px;
   animation: showImage 0.5s linear 1 forwards;
 }
 
@@ -702,7 +730,7 @@ TITLES
   to {
     width: 150px;
     height: 220px;
-    border-radius: 20px;
+    // border-radius: 20px;
     left: 50%;
     bottom: 50px;
   }
@@ -821,7 +849,6 @@ TITLES
   }
 
   .container {
-    border-radius: 0.75rem;
     background-color: #f2f2f2;
     padding: 1.2rem;
   }
