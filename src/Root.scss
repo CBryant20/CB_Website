@@ -11,6 +11,12 @@ body {
   padding: 0 3rem;
 }
 
+@media screen and (max-width: 750px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
 .ant-layout {
   background: #fff;
 }
@@ -28,6 +34,11 @@ body {
   display: flex;
   align-items: center;
   position: relative;
+  flex-direction: column;
+
+  @media screen and (min-width: 751px) {
+    flex-direction: row;
+  }
 
   .hero-text {
     display: flex;
@@ -103,10 +114,6 @@ body {
       }
     }
   }
-
-  @media screen and (max-width: 750px) {
-    flex-direction: column;
-  }
 }
 
 .work-section {
@@ -121,7 +128,7 @@ body {
 }
 
 .hero-block {
-  z-index: 2;
+  z-index: 1000;
 }
 
 @media screen and (max-width: 750px) {
@@ -138,10 +145,16 @@ body {
     max-width: 80%;
   }
 }
+
 .block {
-  animation: appear 3s linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 40%;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.block.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* 
@@ -381,8 +394,6 @@ TITLES
   height: 90vh;
   overflow: hidden;
   overflow-x: hidden;
-  // position: relative;
-  top: auto;
 
   .list {
     display: flex;
@@ -468,6 +479,11 @@ TITLES
           }
         }
       }
+    }
+
+    .item:not(:first-child) {
+      position: relative;
+      inset: auto;
     }
 
     .item:nth-child(1) {
