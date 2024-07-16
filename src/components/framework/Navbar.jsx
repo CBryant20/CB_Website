@@ -27,8 +27,6 @@ export default function AppHeader() {
     setVisible(false);
   };
 
-  const isProjectPage = location.pathname !== "/";
-
   return (
     <nav className='container'>
       <div className='header'>
@@ -57,18 +55,28 @@ export default function AppHeader() {
             onClose={onClose}
             open={visible}
             className='drawer'
+            style={{
+              position: "fixed",
+              top: 0,
+              right: 0,
+              height: "100vh",
+              width: "80vw",
+              maxWidth: "400px",
+            }}
           >
-            <Anchor
-              targetOffset={65}
-              onClick={(e) =>
-                handleNavigation(e, e.target.getAttribute("href"))
-              }
-            >
-              <Link href='#hero' title='Home' />
-              <Link href='#about' title='About' />
-              <Link href='#work' title='Work' />
-              <Link href='#contact' title='Contact' />
-            </Anchor>
+            <div style={{ paddingRight: 0 }}>
+              <Anchor
+                targetOffset={65}
+                onClick={(e) =>
+                  handleNavigation(e, e.target.getAttribute("href"))
+                }
+              >
+                <Link href='#hero' title='Home' />
+                <Link href='#about' title='About' />
+                <Link href='#work' title='Work' />
+                <Link href='#contact' title='Contact' />
+              </Anchor>
+            </div>
           </Drawer>
         </div>
       </div>
