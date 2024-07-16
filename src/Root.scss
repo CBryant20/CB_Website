@@ -823,6 +823,10 @@ TITLES
   }
 }
 
+.slick-slider {
+  overflow: hidden;
+}
+
 .contact {
   display: flex;
   flex-direction: column;
@@ -972,8 +976,12 @@ TITLES
     }
 
     #next {
-      margin-right: 30px;
+      margin-right: 150px;
     }
+  }
+
+  .thumbnail {
+    display: none;
   }
 }
 
