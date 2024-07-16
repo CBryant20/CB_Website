@@ -148,7 +148,7 @@ export default function AppWork() {
         <div className='thumbnail'>
           {rearrangedProjects.map((project, index) => (
             <div key={index} className='item'>
-              <img src={project.img} />
+              <img src={project.img} alt={project.title} />
               <div className='content'>
                 <div className='title'>{project.title}</div>
               </div>
